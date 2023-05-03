@@ -7,8 +7,8 @@ function end(num1, num2, num3) {
     document.getElementById('box-' + num1).style.backgroundColor = '#000'
     document.getElementById('box-' + num2).style.backgroundColor = '#000'
     document.getElementById('box-' + num3).style.backgroundColor = '#000'
-    setInterval(function () { title.innerHTML += '.' }, 1000)
-    setTimeout(function () { location.reload() }, 4000)
+    setInterval(function () { title.innerHTML += '.' }, 700)
+    setTimeout(function () { location.reload() }, 2500)
 }
 function winner() {
     for (let i = 1; i < 10; i++) {
@@ -46,7 +46,7 @@ function squ(id) {
     winner()
 }
 btn.onclick = function () {
-    setInterval(function () { title.innerHTML += '.' }, 1000)
-    setTimeout(function () { location.reload() }, 4000)
+    setInterval(function () { title.innerHTML += '.' }, 700)
+    setTimeout(function () { location.reload() }, 2500)
     title.innerHTML = 'Restarting Game'
 }
