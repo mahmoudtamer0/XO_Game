@@ -1,19 +1,19 @@
 let turn = 'x';
-let title = document.querySelector('.title')
-let btn = document.getElementById('btn')
-let squares = []
+let title = document.querySelector('.title');
+let btn = document.getElementById('btn');
+let squares = [];
 function end(num1, num2, num3) {
     title.innerHTML = `${squares[num1]} is winner`
-    document.getElementById('box-' + num1).style.backgroundColor = '#000'
-    document.getElementById('box-' + num2).style.backgroundColor = '#000'
-    document.getElementById('box-' + num3).style.backgroundColor = '#000'
-    setInterval(function () { title.innerHTML += '.' }, 700)
-    setTimeout(function () { location.reload() }, 2500)
+    document.getElementById('box-' + num1).style.backgroundColor = '#000';
+    document.getElementById('box-' + num2).style.backgroundColor = '#000';
+    document.getElementById('box-' + num3).style.backgroundColor = '#000';
+    setInterval(function () { title.innerHTML += '.' }, 700);
+    setTimeout(function () { location.reload() }, 2500);
 }
 function winner() {
     for (let i = 1; i < 10; i++) {
         squares[i] = document.getElementById('box-' + i).innerHTML
-    }
+    };
     if (squares[1] == squares[2] && squares[2] == squares[3] && squares[2] != '') {
         end(1, 2, 3)
     } else if (squares[4] == squares[5] && squares[5] == squares[6] && squares[5] != '') {
@@ -34,7 +34,7 @@ function winner() {
 }
 function squ(id) {
     let element = document.getElementById(id);
-    if (turn === 'x' && element.innerHTML === '') {
+    if (turn == 'x' && element.innerHTML == '') {
         element.innerHTML = 'X';
         turn = 'o';
         title.innerHTML = 'O turn'
@@ -46,7 +46,7 @@ function squ(id) {
     winner()
 }
 btn.onclick = function () {
-    setInterval(function () { title.innerHTML += '.' }, 700)
-    setTimeout(function () { location.reload() }, 2500)
-    title.innerHTML = 'Restarting Game'
+    setInterval(function () { title.innerHTML += '.' }, 700);
+    setTimeout(function () { location.reload() }, 2500);
+    title.innerHTML = 'Restarting Game';
 }
